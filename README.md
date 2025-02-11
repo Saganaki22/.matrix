@@ -2,6 +2,10 @@
 
 Turn your images and videos into mesmerizing dotted artworks with this sleek web application! Built with pure vanilla JavaScript, this app uniquely transforms your media into stunning dot-matrix-style visuals.
 
+# Live Demo
+
+Check out the live demo [.Matrix](https://saganaki22.github.io/.matrix/)
+
 ## 📸 Preview
 
 <div align="center">
