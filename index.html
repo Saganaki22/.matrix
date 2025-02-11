@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>.matrix</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+<body>
+    <div class="container">
+        <input type="file" id="fileInput" accept="image/*,video/*" style="display: none;">
+        
+        <div class="drop-zone">
+            <div class="drop-message">
+                <div class="icon">
+                    <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                        <polyline points="17 8 12 3 7 8"/>
+                        <line x1="12" y1="3" x2="12" y2="15"/>
+                    </svg>
+                </div>
+                <p>Drag and drop image or video here</p>
+                <p class="sub-text">or click to upload</p>
+            </div>
+            <canvas id="outputCanvas"></canvas>
+            <button id="clearMedia">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+
+        <div class="controls-wrapper">
+            <div class="button-container">
+                <button id="downloadBtn">Download Image</button>
+                <button id="downloadVideo">Process Video</button>
+                <button id="cancelProcessing">Cancel</button>
+            </div>
+        </div>
+
+        <div class="settings-panel">
+            <button class="settings-toggle">
+                <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="settings-content">
+                <div class="control-group">
+                    <div class="control-row">
+                        <label for="dotSize">Dot Size:</label>
+                        <span id="dotSizeValue">3</span>
+                        <input type="range" id="dotSize" min="1" max="10" value="3">
+                    </div>
+                </div>
+                <div class="control-group">
+                    <div class="control-row">
+                        <label for="spacing">Spacing:</label>
+                        <span id="spacingValue">8</span>
+                        <input type="range" id="spacing" min="4" max="20" value="8">
+                    </div>
+                </div>
+                <div class="control-group">
+                    <div class="control-row">
+                        <label for="threshold">Threshold:</label>
+                        <span id="thresholdValue">128</span>
+                        <input type="range" id="threshold" min="0" max="255" value="128">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
